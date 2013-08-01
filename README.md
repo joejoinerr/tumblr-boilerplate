@@ -1,6 +1,6 @@
 Tumblr Boilerplate
 ==================
-The Tumblr Boilerplate (unofficial) is a object-oriented, fully automated approach to Tumblr theme development, providing some suggested content tags and scripts so you can concentrate on the *style*.
+The Tumblr Boilerplate (unofficial) is a fully automated approach to Tumblr theme development, providing some suggested content tags and scripts so you can concentrate on the *style*.
 
 ## Quick start
 1. Download the zip archive: <https://github.com/joejoinerr/tumblr-boilerplate/archive/master.zip>
