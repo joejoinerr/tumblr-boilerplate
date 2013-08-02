@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -141,8 +141,8 @@
 
     {block:Pagination}
         <footer id="pagination" class="pagination">
-            {block:PreviousPage}<a href="{PreviousPage}" class="pagination__link pagination__link--prev">Previous</a>{/block:PreviousPage}
-            {block:NextPage}<a href="{NextPage}" class="pagination__link pagination__link--next">Next</a>{/block:NextPage}
+            {block:PreviousPage}<a href="{PreviousPage}" class="pagination__link pagination__link--prev">{lang:Previous}</a>{/block:PreviousPage}
+            {block:NextPage}<a href="{NextPage}" class="pagination__link pagination__link--next">{lang:Next}</a>{/block:NextPage}
         </footer>
     {/block:Pagination}
 </body>
