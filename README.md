@@ -20,6 +20,9 @@ The Tumblr Boilerplate (unofficial) is a fully automated approach to Tumblr them
 
 Check out the [Tumblr theme docs](http://www.tumblr.com/docs/en/custom_themes) for information about specific variables or blocks.
 
+## Documentation
+[Read the Tumblr Boilerplate docs &rarr;](https://github.com/joejoinerr/tumblr-boilerplate/wiki)
+
 ## Contribute
 If you've got any great features to add to the Tumblr Boilerplate, or if there's a problem with my code, then get involved! This is a side project so I might not be immediately available:
 
