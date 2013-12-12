@@ -1,8 +1,11 @@
 /* Tumblr Boilerplate by Joe Joiner | MIT License | git.io/yvzrLg */
 
-body {
+html {
     font-size: 1em;
     line-height: 1.5;
+}
+
+body {
     color: {color:Body Text};
 }
 
