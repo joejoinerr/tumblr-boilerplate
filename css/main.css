@@ -15,18 +15,18 @@ video {
     vertical-align: middle;
 }
 
-blockquote {
+textarea {
+    resize: vertical;
+}
+
+.featured-quote {
     quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
-blockquote:before {
+.featured-quote:before {
     content: open-quote;
 }
 
-blockquote:after {
+.featured-quote:after {
     content: close-quote;
-}
-
-textarea {
-    resize: vertical;
 }
