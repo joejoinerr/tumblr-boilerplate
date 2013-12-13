@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         htmlbuild: {
             dist: {
                 src: 'index.html',
-                dest: 'build/',
+                dest: 'Build/',
             },
             options: {
                 styles: {
