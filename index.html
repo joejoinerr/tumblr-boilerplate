@@ -48,96 +48,92 @@
         {/block:HasPages}
     </header>
 
-    <main id="main" role="main">
-        <ol class="posts-list" reversed>
-            {block:Posts}
-                <li>
-                    <article class="single-post single-post--{PostType}{block:Photoset}set{/block:Photoset}">
+    <main id="main" role="main" class="{block:IndexPage}posts-list{/block:IndexPage}">
+        {block:Posts}
+            <article class="single-post single-post--{PostType}{block:Photoset}set{/block:Photoset}">
 
-                        {block:Text}
-                            {block:Title}
-                                <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                            {/block:Title}
-                            {Body}
-                        {/block:Text}
+                {block:Text}
+                    {block:Title}
+                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+                    {/block:Title}
+                    {Body}
+                {/block:Text}
 
-                        {block:Photo}
-                            <figure>
-                                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                {block:Photo}
+                    <figure>
+                        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
 
-                                {block:Caption}
-                                    <figcaption class="caption caption--photo">{Caption}</figcaption>
-                                {/block:Caption}
-                            </figure>
-                        {/block:Photo}
+                        {block:Caption}
+                            <figcaption class="caption caption--photo">{Caption}</figcaption>
+                        {/block:Caption}
+                    </figure>
+                {/block:Photo}
 
-                        {block:Photoset}
-                            <figure>
-                                {Photoset-500}
+                {block:Photoset}
+                    <figure>
+                        {Photoset-500}
 
-                                {block:Caption}
-                                    <figcaption class="caption caption--photoset">{Caption}</figcaption>
-                                {/block:Caption}
-                            </figure>
-                        {/block:Photoset}
+                        {block:Caption}
+                            <figcaption class="caption caption--photoset">{Caption}</figcaption>
+                        {/block:Caption}
+                    </figure>
+                {/block:Photoset}
 
-                        {block:Quote}
-                            <figure>
-                                <blockquote class="featured-quote">{Quote}</blockquote>
+                {block:Quote}
+                    <figure>
+                        <blockquote class="featured-quote">{Quote}</blockquote>
 
-                                {block:Source}
-                                    <figcaption class="caption caption--quote-source">&mdash;{Source}</figcaption>
-                                {/block:Source}
-                            </figure>
-                        {/block:Quote}
+                        {block:Source}
+                            <figcaption class="caption caption--quote-source">&mdash;{Source}</figcaption>
+                        {/block:Source}
+                    </figure>
+                {/block:Quote}
 
-                        {block:Link}
-                            <a href="{URL}" class="featured-link" {Target}>{Name}</a>
+                {block:Link}
+                    <a href="{URL}" class="featured-link" {Target}>{Name}</a>
 
-                            {block:Description}
-                                <div class="caption caption--link-description">{Description}</div>
-                            {/block:Description}
-                        {/block:Link}
+                    {block:Description}
+                        <div class="caption caption--link-description">{Description}</div>
+                    {/block:Description}
+                {/block:Link}
 
-                        {block:Chat}
-                            {block:Title}
-                                <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                            {/block:Title}
+                {block:Chat}
+                    {block:Title}
+                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+                    {/block:Title}
 
-                            <ul class="chat-log">
-                                {block:Lines}
-                                    <li class="chat-log__line {Alt} user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
-                                {/block:Lines}
-                            </ul>
-                        {/block:Chat}
+                    <ul class="chat-log">
+                        {block:Lines}
+                            <li class="chat-log__line {Alt} user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
+                        {/block:Lines}
+                    </ul>
+                {/block:Chat}
 
-                        {block:Audio}
-                            <figure>
-                                {AudioPlayerBlack}
+                {block:Audio}
+                    <figure>
+                        {AudioPlayerBlack}
 
-                                {block:Caption}
-                                    <figcaption class="caption caption--audio">{Caption}</figcaption>
-                                {/block:Caption}
-                            </figure>
-                        {/block:Audio}
+                        {block:Caption}
+                            <figcaption class="caption caption--audio">{Caption}</figcaption>
+                        {/block:Caption}
+                    </figure>
+                {/block:Audio}
 
-                        {block:Video}
-                            <figure>
-                                {Video-500}
+                {block:Video}
+                    <figure>
+                        {Video-500}
 
-                                {block:Caption}
-                                    <figcaption class="caption caption--video">{Caption}</figcaption>
-                                {/block:Caption}
-                            </figure>
-                        {/block:Video}
+                        {block:Caption}
+                            <figcaption class="caption caption--video">{Caption}</figcaption>
+                        {/block:Caption}
+                    </figure>
+                {/block:Video}
 
-                        <footer class="post-meta">
-                            <a href="{Permalink}" class="post-meta__date">{Month} {DayOfMonth}</a>
-                        </footer>
-                    </article>
-                </li>
-            {/block:Posts}
-        </ol>
+                <footer class="post-meta">
+                    <a href="{Permalink}" class="post-meta__date">{Month} {DayOfMonth}</a>
+                </footer>
+            </article>
+        {/block:Posts}
 
         {block:PostNotes}
             <div id="notes" class="post-notes">
