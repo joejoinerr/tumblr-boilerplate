@@ -9,7 +9,7 @@ The Tumblr Boilerplate (unofficial) is a fully automated approach to Tumblr them
 ## Features
 - Automatic concatenation, minification and moving external CSS to a `<style>` tag via [Grunt](http://gruntjs.com)
 - Suggested markup for common post types
-- Posts loop in reverse-chronological list
+- Posts loop in semantic `<article>` tags
 - Common and useful `<meta>` tags
 - Iterative `<title>` tag
 - User variables
