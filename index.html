@@ -64,7 +64,7 @@
 
                 {block:Photo}
                     <!-- Photo -->
-                    <figure>
+                    <figure class="post-media">
                         {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
 
                         {block:Caption}
@@ -75,7 +75,7 @@
 
                 {block:Photoset}
                     <!-- Photoset -->
-                    <figure>
+                    <figure class="post-media">
                         {Photoset-500}
 
                         {block:Caption}
@@ -86,7 +86,7 @@
 
                 {block:Quote}
                     <!-- Quote -->
-                    <figure>
+                    <figure class="post-media">
                         <blockquote class="featured-quote">{Quote}</blockquote>
 
                         {block:Source}
@@ -119,7 +119,7 @@
 
                 {block:Audio}
                     <!-- Audio -->
-                    <figure>
+                    <figure class="post-media">
                         {AudioPlayerBlack}
 
                         {block:Caption}
@@ -130,7 +130,7 @@
 
                 {block:Video}
                     <!-- Video -->
-                    <figure>
+                    <figure class="post-media">
                         {Video-500}
 
                         {block:Caption}
