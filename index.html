@@ -46,7 +46,7 @@
                 </ul>
             </nav>
         {/block:HasPages}
-    </header>
+    </header><!-- /site-header -->
 
 
     <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
@@ -144,12 +144,12 @@
                     <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
                 </footer>
 
-            </article>
+            </article><!-- /single-post -->
 
             {block:PostNotes}
                 <div class="post-notes" id="notes">
                     {PostNotes-16}
-                </div>
+                </div><!-- /post-notes -->
             {/block:PostNotes}
 
         {/block:Posts}
@@ -160,7 +160,7 @@
         <footer class="pagination" id="pagination">
             {block:PreviousPage}<a class="pagination__link  pagination__link--prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
             {block:NextPage}<a class="pagination__link  pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
-        </footer>
+        </footer><!-- /pagination -->
     {/block:Pagination}
 </body>
 </html>
