@@ -1,32 +1,36 @@
 /* Tumblr Boilerplate by Joe Joiner | MIT License | git.io/yvzrLg */
 
 html {
-    font-size: 1em;
-    line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 body {
-    color: {color:Body Text};
+  color: {color:Body Text};
 }
 
 audio,
 img,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
+}
+
+.caption--quote-source:before {
+  content: '\2014';
 }
 
 .featured-quote {
-    quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
 .featured-quote:before {
-    content: open-quote;
+  content: open-quote;
 }
 
 .featured-quote:after {
-    content: close-quote;
+  content: close-quote;
 }
