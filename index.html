@@ -142,9 +142,18 @@
                 <!-- Post metadata -->
                 <footer class="post-meta">
                     <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
+                    <a class="post-meta__notes" href="#">{NoteCountWithLabel}</a>
+                    {block:HasTags}
+                        <ul class="tags-list">
+                            {block:Tags}
+                                <li><a class="tags-list__tag" href="{TagURL}">{Tag}</a></li>
+                            {/block:Tags}
+                        </ul>
+                    {/block:HasTags}
                 </footer>
 
             </article><!-- /single-post -->
+
 
             {block:PostNotes}
                 <div class="post-notes" id="notes">
@@ -162,5 +171,6 @@
             {block:NextPage}<a class="pagination__link  pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
         </footer><!-- /pagination -->
     {/block:Pagination}
+
 </body>
 </html>
