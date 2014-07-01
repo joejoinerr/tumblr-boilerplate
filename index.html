@@ -33,8 +33,8 @@
     <![endif]-->
 </head>
 <body>
-    <header id="header" class="site-header" role="banner">
-        <a href="/" class="site-title">{Title}</a>
+    <header class="site-header" id="header" role="banner">
+        <a class="site-title" href="/">{Title}</a>
 
         <!-- Other blog information and links -->
         {block:HasPages}
@@ -48,7 +48,7 @@
         {/block:HasPages}
     </header>
 
-    <main id="main" role="main" class="{block:IndexPage}posts-list{/block:IndexPage}">
+    <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
         {block:Posts}
             <article class="single-post single-post--{PostType}{block:Photoset}set{/block:Photoset}">
 
@@ -90,7 +90,7 @@
                 {/block:Quote}
 
                 {block:Link}
-                    <a href="{URL}" class="featured-link" {Target}>{Name}</a>
+                    <a class="featured-link" href="{URL}" {Target}>{Name}</a>
 
                     {block:Description}
                         <div class="caption caption--link-description">{Description}</div>
@@ -130,22 +130,22 @@
                 {/block:Video}
 
                 <footer class="post-meta">
-                    <a href="{Permalink}" class="post-meta__date">{Month} {DayOfMonth}</a>
+                    <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
                 </footer>
             </article>
         {/block:Posts}
 
         {block:PostNotes}
-            <div id="notes" class="post-notes">
+            <div class="post-notes" id="notes">
                 {PostNotes-16}
             </div>
         {/block:PostNotes}
     </main>
 
     {block:Pagination}
-        <footer id="pagination" class="pagination">
-            {block:PreviousPage}<a href="{PreviousPage}" class="pagination__link pagination__link--prev">{lang:Previous}</a>{/block:PreviousPage}
-            {block:NextPage}<a href="{NextPage}" class="pagination__link pagination__link--next">{lang:Next}</a>{/block:NextPage}
+        <footer class="pagination" id="pagination">
+            {block:PreviousPage}<a class="pagination__link pagination__link--prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
+            {block:NextPage}<a class="pagination__link pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
         </footer>
     {/block:Pagination}
 </body>
