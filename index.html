@@ -33,6 +33,7 @@
     <![endif]-->
 </head>
 <body>
+
     <header class="site-header" id="header" role="banner">
         <a class="site-title" href="/">{Title}</a>
 
@@ -112,7 +113,7 @@
 
                     <ul class="chat-log">
                         {block:Lines}
-                            <li class="chat-log__line  {Alt}  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
+                            <li class="chat-log__line  chat-log__line--{Alt}  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
                         {/block:Lines}
                     </ul>
                 {/block:Chat}
