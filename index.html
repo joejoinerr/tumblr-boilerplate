@@ -48,11 +48,14 @@
         {/block:HasPages}
     </header>
 
+
     <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
         {block:Posts}
+
             <article class="single-post single-post--{PostType}{block:Photoset}set{/block:Photoset}">
 
                 {block:Text}
+                    <!-- Text -->
                     {block:Title}
                         <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
                     {/block:Title}
@@ -60,6 +63,7 @@
                 {/block:Text}
 
                 {block:Photo}
+                    <!-- Photo -->
                     <figure>
                         {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
 
@@ -70,6 +74,7 @@
                 {/block:Photo}
 
                 {block:Photoset}
+                    <!-- Photoset -->
                     <figure>
                         {Photoset-500}
 
@@ -80,6 +85,7 @@
                 {/block:Photoset}
 
                 {block:Quote}
+                    <!-- Quote -->
                     <figure>
                         <blockquote class="featured-quote">{Quote}</blockquote>
 
@@ -90,6 +96,7 @@
                 {/block:Quote}
 
                 {block:Link}
+                    <!-- Link -->
                     <a class="featured-link" href="{URL}" {Target}>{Name}</a>
 
                     {block:Description}
@@ -98,6 +105,7 @@
                 {/block:Link}
 
                 {block:Chat}
+                    <!-- Chat -->
                     {block:Title}
                         <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
                     {/block:Title}
@@ -110,6 +118,7 @@
                 {/block:Chat}
 
                 {block:Audio}
+                    <!-- Audio -->
                     <figure>
                         {AudioPlayerBlack}
 
@@ -120,6 +129,7 @@
                 {/block:Audio}
 
                 {block:Video}
+                    <!-- Video -->
                     <figure>
                         {Video-500}
 
@@ -129,18 +139,22 @@
                     </figure>
                 {/block:Video}
 
+                <!-- Post metadata -->
                 <footer class="post-meta">
                     <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
                 </footer>
-            </article>
-        {/block:Posts}
 
-        {block:PostNotes}
-            <div class="post-notes" id="notes">
-                {PostNotes-16}
-            </div>
-        {/block:PostNotes}
+            </article>
+
+            {block:PostNotes}
+                <div class="post-notes" id="notes">
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+
+        {/block:Posts}
     </main>
+
 
     {block:Pagination}
         <footer class="pagination" id="pagination">
