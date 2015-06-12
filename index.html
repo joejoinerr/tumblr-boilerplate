@@ -55,7 +55,7 @@
   <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
     {block:Posts}
 
-      <article class="single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset}">
+      <article class="[ single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset} ]">
 
         {block:Text}
           <!-- Text -->
@@ -71,7 +71,7 @@
             {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
 
             {block:Caption}
-              <figcaption class="caption  caption--photo">{Caption}</figcaption>
+              <figcaption class="[ caption  caption--photo ]">{Caption}</figcaption>
             {/block:Caption}
           </figure>
         {/block:Photo}
@@ -82,7 +82,7 @@
             {Photoset-500}
 
             {block:Caption}
-              <figcaption class="caption  caption--photoset">{Caption}</figcaption>
+              <figcaption class="[ caption  caption--photoset ]">{Caption}</figcaption>
             {/block:Caption}
           </figure>
         {/block:Photoset}
@@ -93,7 +93,7 @@
             <blockquote class="featured-quote">{Quote}</blockquote>
 
             {block:Source}
-              <figcaption class="caption  caption--quote-source">{Source}</figcaption>
+              <figcaption class="[ caption  caption--quote-source ]">{Source}</figcaption>
             {/block:Source}
           </figure>
         {/block:Quote}
@@ -103,7 +103,7 @@
           <a class="featured-link" href="{URL}" {Target}>{Name}</a>
 
           {block:Description}
-            <div class="caption  caption--link-description">{Description}</div>
+            <div class="[ caption  caption--link-description ]">{Description}</div>
           {/block:Description}
         {/block:Link}
 
@@ -115,7 +115,7 @@
 
           <ul class="chat-log">
             {block:Lines}
-              <li class="chat-log__line  chat-log__line--{Alt}  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
+              <li class="[ chat-log__line  chat-log__line--{Alt} ] user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
             {/block:Lines}
           </ul>
         {/block:Chat}
@@ -126,7 +126,7 @@
             {AudioEmbed}
 
             {block:Caption}
-              <figcaption class="caption  caption--audio">{Caption}</figcaption>
+              <figcaption class="[ caption  caption--audio ]">{Caption}</figcaption>
             {/block:Caption}
           </figure>
         {/block:Audio}
@@ -137,7 +137,7 @@
             {VideoEmbed-500}
 
             {block:Caption}
-              <figcaption class="caption  caption--video">{Caption}</figcaption>
+              <figcaption class="[ caption  caption--video ]">{Caption}</figcaption>
             {/block:Caption}
           </figure>
         {/block:Video}
@@ -170,8 +170,8 @@
 
   {block:Pagination}
     <footer class="pagination" id="pagination">
-      {block:PreviousPage}<a class="pagination__link  pagination__link--prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
-      {block:NextPage}<a class="pagination__link  pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
+      {block:PreviousPage}<a class="[ pagination__link  pagination__link--prev ]" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
+      {block:NextPage}<a class="[ pagination__link  pagination__link--next ]" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
     </footer><!-- /pagination -->
   {/block:Pagination}
 
