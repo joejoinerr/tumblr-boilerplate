@@ -20,6 +20,8 @@
   <meta name="color:Background" content="#ffffff">
   <meta name="color:Body Text" content="#222222">
   <meta name="color:Link Text" content="#0000ff">
+  <meta name="if:Show title" content="1">
+  <meta name="if:Show navigation" content="1">
 
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -32,18 +34,21 @@
 <body>
 
   <header class="site-header" id="header" role="banner">
-    <a class="site-title" href="/">{Title}</a>
+    {block:IfShowTitle}
+      <a class="site-title" href="/">{Title}</a>
+    {/block:IfShowTitle}
 
-    <!-- Other blog information and links -->
-    {block:HasPages}
+    {block:IfShowNavigation}
       <nav role="navigation">
         <ul class="site-nav">
-          {block:Pages}
-            <li><a href="{URL}">{Label}</a></li>
-          {/block:Pages}
+          {block:HasPages}
+            {block:Pages}
+              <li><a href="{URL}">{Label}</a></li>
+            {/block:Pages}
+          {/block:HasPages}
         </ul>
       </nav>
-    {/block:HasPages}
+    {/block:IfShowNavigation}
   </header><!-- /site-header -->
 
 
