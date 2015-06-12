@@ -1,177 +1,177 @@
 <!DOCTYPE html>
 <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-        {block:PostTitle}{PostTitle} - {/block:PostTitle}
-        {block:TagPage}{Tag} - {/block:TagPage}
-        {block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}
-        {Title}
-    </title>
-    {block:Description}
-        <meta name="description" content="{MetaDescription}">
-    {/block:Description}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    {block:PostTitle}{PostTitle} - {/block:PostTitle}
+    {block:TagPage}{Tag} - {/block:TagPage}
+    {block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}
+    {Title}
+  </title>
+  {block:Description}
+    <meta name="description" content="{MetaDescription}">
+  {/block:Description}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Appearance options -->
-    <meta name="font:Title Font" content="Arial, sans-serif">
-    <meta name="font:Body Font" content="Arial, sans-serif">
-    <meta name="color:Background" content="#ffffff">
-    <meta name="color:Body Text" content="#222222">
-    <meta name="color:Link Text" content="#0000ff">
+  <!-- Appearance options -->
+  <meta name="font:Title Font" content="Arial, sans-serif">
+  <meta name="font:Body Font" content="Arial, sans-serif">
+  <meta name="color:Background" content="#ffffff">
+  <meta name="color:Body Text" content="#222222">
+  <meta name="color:Link Text" content="#0000ff">
 
-    <link rel="shortcut icon" href="{Favicon}">
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css">
-    <!-- build:style inline main -->
-        <link rel="stylesheet" href="css/main.css">
-    <!-- /build -->
-    <style>{CustomCSS}</style>
-    <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-    <![endif]-->
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css">
+  <!-- build:style inline main -->
+    <link rel="stylesheet" href="css/main.css">
+  <!-- /build -->
+  <style>{CustomCSS}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <![endif]-->
 </head>
 <body>
 
-    <header class="site-header" id="header" role="banner">
-        <a class="site-title" href="/">{Title}</a>
+  <header class="site-header" id="header" role="banner">
+    <a class="site-title" href="/">{Title}</a>
 
-        <!-- Other blog information and links -->
-        {block:HasPages}
-            <nav role="navigation">
-                <ul class="site-nav">
-                    {block:Pages}
-                        <li><a href="{URL}">{Label}</a></li>
-                    {/block:Pages}
-                </ul>
-            </nav>
-        {/block:HasPages}
-    </header><!-- /site-header -->
-
-
-    <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
-        {block:Posts}
-
-            <article class="single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset}">
-
-                {block:Text}
-                    <!-- Text -->
-                    {block:Title}
-                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                    {/block:Title}
-                    {Body}
-                {/block:Text}
-
-                {block:Photo}
-                    <!-- Photo -->
-                    <figure class="post-media">
-                        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
-
-                        {block:Caption}
-                            <figcaption class="caption  caption--photo">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Photo}
-
-                {block:Photoset}
-                    <!-- Photoset -->
-                    <figure class="post-media">
-                        {Photoset-500}
-
-                        {block:Caption}
-                            <figcaption class="caption  caption--photoset">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Photoset}
-
-                {block:Quote}
-                    <!-- Quote -->
-                    <figure class="post-media">
-                        <blockquote class="featured-quote">{Quote}</blockquote>
-
-                        {block:Source}
-                            <figcaption class="caption  caption--quote-source">{Source}</figcaption>
-                        {/block:Source}
-                    </figure>
-                {/block:Quote}
-
-                {block:Link}
-                    <!-- Link -->
-                    <a class="featured-link" href="{URL}" {Target}>{Name}</a>
-
-                    {block:Description}
-                        <div class="caption  caption--link-description">{Description}</div>
-                    {/block:Description}
-                {/block:Link}
-
-                {block:Chat}
-                    <!-- Chat -->
-                    {block:Title}
-                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                    {/block:Title}
-
-                    <ul class="chat-log">
-                        {block:Lines}
-                            <li class="chat-log__line  chat-log__line--{Alt}  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
-                        {/block:Lines}
-                    </ul>
-                {/block:Chat}
-
-                {block:Audio}
-                    <!-- Audio -->
-                    <figure class="post-media">
-                        {AudioEmbed}
-
-                        {block:Caption}
-                            <figcaption class="caption  caption--audio">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Audio}
-
-                {block:Video}
-                    <!-- Video -->
-                    <figure class="post-media">
-                        {VideoEmbed-500}
-
-                        {block:Caption}
-                            <figcaption class="caption  caption--video">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Video}
-
-                <!-- Post metadata -->
-                <footer class="post-meta">
-                    <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
-                    <a class="post-meta__notes" href="#">{NoteCountWithLabel}</a>
-                    {block:HasTags}
-                        <ul class="tags-list">
-                            {block:Tags}
-                                <li><a class="tags-list__tag" href="{TagURL}">{Tag}</a></li>
-                            {/block:Tags}
-                        </ul>
-                    {/block:HasTags}
-                </footer>
-
-            </article><!-- /single-post -->
+    <!-- Other blog information and links -->
+    {block:HasPages}
+      <nav role="navigation">
+        <ul class="site-nav">
+          {block:Pages}
+            <li><a href="{URL}">{Label}</a></li>
+          {/block:Pages}
+        </ul>
+      </nav>
+    {/block:HasPages}
+  </header><!-- /site-header -->
 
 
-            {block:PostNotes}
-                <div class="post-notes" id="notes">
-                    {PostNotes-16}
-                </div><!-- /post-notes -->
-            {/block:PostNotes}
+  <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
+    {block:Posts}
 
-        {/block:Posts}
-    </main>
+      <article class="single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset}">
+
+        {block:Text}
+          <!-- Text -->
+          {block:Title}
+            <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+          {Body}
+        {/block:Text}
+
+        {block:Photo}
+          <!-- Photo -->
+          <figure class="post-media">
+            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
+
+            {block:Caption}
+              <figcaption class="caption  caption--photo">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Photo}
+
+        {block:Photoset}
+          <!-- Photoset -->
+          <figure class="post-media">
+            {Photoset-500}
+
+            {block:Caption}
+              <figcaption class="caption  caption--photoset">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Photoset}
+
+        {block:Quote}
+          <!-- Quote -->
+          <figure class="post-media">
+            <blockquote class="featured-quote">{Quote}</blockquote>
+
+            {block:Source}
+              <figcaption class="caption  caption--quote-source">{Source}</figcaption>
+            {/block:Source}
+          </figure>
+        {/block:Quote}
+
+        {block:Link}
+          <!-- Link -->
+          <a class="featured-link" href="{URL}" {Target}>{Name}</a>
+
+          {block:Description}
+            <div class="caption  caption--link-description">{Description}</div>
+          {/block:Description}
+        {/block:Link}
+
+        {block:Chat}
+          <!-- Chat -->
+          {block:Title}
+            <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+
+          <ul class="chat-log">
+            {block:Lines}
+              <li class="chat-log__line  chat-log__line--{Alt}  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
+            {/block:Lines}
+          </ul>
+        {/block:Chat}
+
+        {block:Audio}
+          <!-- Audio -->
+          <figure class="post-media">
+            {AudioEmbed}
+
+            {block:Caption}
+              <figcaption class="caption  caption--audio">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Audio}
+
+        {block:Video}
+          <!-- Video -->
+          <figure class="post-media">
+            {VideoEmbed-500}
+
+            {block:Caption}
+              <figcaption class="caption  caption--video">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Video}
+
+        <!-- Post metadata -->
+        <footer class="post-meta">
+          <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
+          <a class="post-meta__notes" href="#">{NoteCountWithLabel}</a>
+          {block:HasTags}
+            <ul class="tags-list">
+              {block:Tags}
+                <li><a class="tags-list__tag" href="{TagURL}">{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          {/block:HasTags}
+        </footer>
+
+      </article><!-- /single-post -->
 
 
-    {block:Pagination}
-        <footer class="pagination" id="pagination">
-            {block:PreviousPage}<a class="pagination__link  pagination__link--prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
-            {block:NextPage}<a class="pagination__link  pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
-        </footer><!-- /pagination -->
-    {/block:Pagination}
+      {block:PostNotes}
+        <div class="post-notes" id="notes">
+          {PostNotes-16}
+        </div><!-- /post-notes -->
+      {/block:PostNotes}
+
+    {/block:Posts}
+  </main>
+
+
+  {block:Pagination}
+    <footer class="pagination" id="pagination">
+      {block:PreviousPage}<a class="pagination__link  pagination__link--prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
+      {block:NextPage}<a class="pagination__link  pagination__link--next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
+    </footer><!-- /pagination -->
+  {/block:Pagination}
 
 </body>
 </html>
