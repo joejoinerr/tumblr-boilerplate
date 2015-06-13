@@ -12,6 +12,7 @@
     "url": "https://github.com/joejoinerr/tumblr-boilerplate.git"
   },
   "license": "MIT",
+  "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
     "js-beautify": "~1.3.4",
