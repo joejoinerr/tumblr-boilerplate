@@ -1,6 +1,6 @@
 # Folders
 node_modules/
-Build/
+dist/
 tumblr-boilerplate.wiki/
 
 # Files
