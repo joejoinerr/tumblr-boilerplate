@@ -16,7 +16,7 @@ The Tumblr Boilerplate (unofficial) is a fully automated approach to Tumblr them
 - OOCSS and BEM suggested class names
 - Simple pagination links
 - IDs on page sections for easy linking
-- Bundled with [Normalize.css](http://necolas.github.com/normalize.css/) and [html5shiv](https://code.google.com/p/html5shiv/) via [cdnjs](http://cdnjs.com)
+- Bundled with [Normalize.css](http://necolas.github.com/normalize.css/) via [cdnjs](http://cdnjs.com)
 
 Check out the [Tumblr theme docs](http://www.tumblr.com/docs/en/custom_themes) for information about specific variables or blocks.
 
