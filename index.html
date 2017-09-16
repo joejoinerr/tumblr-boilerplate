@@ -1,207 +1,207 @@
 <!doctype html>
 <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-        {block:PostTitle}{PostTitle} - {/block:PostTitle}
-        {block:TagPage}{Tag} - {/block:TagPage}
-        {block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}
-        {Title}
-    </title>
-    {block:Description}
-        <meta name="description" content="{MetaDescription}">
-    {/block:Description}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+    {block:PostTitle}{PostTitle} - {/block:PostTitle}
+    {block:TagPage}{Tag} - {/block:TagPage}
+    {block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}
+    {Title}
+  </title>
+  {block:Description}
+    <meta name="description" content="{MetaDescription}">
+  {/block:Description}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Appearance options -->
-    <meta name="font:Title Font" content="Arial, sans-serif">
-    <meta name="font:Body Font" content="Arial, sans-serif">
-    <meta name="color:Background" content="#ffffff">
-    <meta name="color:Body Text" content="#222222">
-    <meta name="color:Link Text" content="#0000ff">
-    <meta name="if:Show title" content="1">
-    <meta name="if:Show navigation" content="1">
-    <meta name="if:Show Home link" content="0">
-    <meta name="if:Show Archive link" content="1">
-    <meta name="if:Show search box" content="1">
+  <!-- Appearance options -->
+  <meta name="font:Title Font" content="Arial, sans-serif">
+  <meta name="font:Body Font" content="Arial, sans-serif">
+  <meta name="color:Background" content="#ffffff">
+  <meta name="color:Body Text" content="#222222">
+  <meta name="color:Link Text" content="#0000ff">
+  <meta name="if:Show title" content="1">
+  <meta name="if:Show navigation" content="1">
+  <meta name="if:Show Home link" content="0">
+  <meta name="if:Show Archive link" content="1">
+  <meta name="if:Show search box" content="1">
 
-    <link rel="shortcut icon" href="{Favicon}">
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
-    <!-- build:style inline main -->
-        <link rel="stylesheet" href="css/main.css">
-    <!-- /build -->
-    <style>{CustomCSS}</style>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+  <!-- build:style inline main -->
+    <link rel="stylesheet" href="css/main.css">
+  <!-- /build -->
+  <style>{CustomCSS}</style>
 </head>
 <body>
 
-    <header class="site-header" id="header" role="banner">
-        {block:IfShowTitle}
-            <a class="site-title" href="/">{Title}</a>
-        {/block:IfShowTitle}
+  <header class="site-header" id="header" role="banner">
+    {block:IfShowTitle}
+      <a class="site-title" href="/">{Title}</a>
+    {/block:IfShowTitle}
 
-        {block:IfShowSearchBox}
-            <form class="search-form" action="/search" method="get">
-                <input type="search" name="q" value="{SearchQuery}" placeholder="Search&hellip;" required>
-            </form>
-        {/block:IfShowSearchBox}
+    {block:IfShowSearchBox}
+      <form class="search-form" action="/search" method="get">
+        <input type="search" name="q" value="{SearchQuery}" placeholder="Search&hellip;" required>
+      </form>
+    {/block:IfShowSearchBox}
 
-        {block:IfShowNavigation}
-            <nav role="navigation">
-                <ul class="site-nav">
-                    {block:IfShowHomeLink}
-                        <li><a href="/">Home</a></li>
-                    {/block:IfShowHomeLink}
-                    {block:IfShowArchiveLink}
-                        <li><a href="/archive">Archive</a></li>
-                    {/block:IfShowArchiveLink}
-                    {block:HasPages}
-                        {block:Pages}
-                            <li><a href="{URL}">{Label}</a></li>
-                        {/block:Pages}
-                    {/block:HasPages}
-                </ul>
-            </nav>
-        {/block:IfShowNavigation}
-    </header><!-- /site-header -->
-
-
-    <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
-        {block:Posts}
-
-            <article class="[ single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset} ]">
-
-                {block:Text}
-                    <!-- Text -->
-                    {block:Title}
-                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                    {/block:Title}
-                    {Body}
-                {/block:Text}
-
-                {block:Photo}
-                    <!-- Photo -->
-                    <figure class="post-media">
-                        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
-
-                        {block:Caption}
-                            <figcaption class="[ caption  caption--photo ]">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Photo}
-
-                {block:Photoset}
-                    <!-- Photoset -->
-                    <figure class="post-media">
-                        {Photoset-500}
-
-                        {block:Caption}
-                            <figcaption class="[ caption  caption--photoset ]">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Photoset}
-
-                {block:Quote}
-                    <!-- Quote -->
-                    <figure class="post-media">
-                        <blockquote class="featured-quote">{Quote}</blockquote>
-
-                        {block:Source}
-                            <figcaption class="[ caption  caption--quote-source ]">{Source}</figcaption>
-                        {/block:Source}
-                    </figure>
-                {/block:Quote}
-
-                {block:Link}
-                    <!-- Link -->
-                    <a class="featured-link" href="{URL}" {Target}>{Name}</a>
-
-                    {block:Description}
-                        <div class="[ caption  caption--link-description ]">{Description}</div>
-                    {/block:Description}
-                {/block:Link}
-
-                {block:Chat}
-                    <!-- Chat -->
-                    {block:Title}
-                        <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
-                    {/block:Title}
-
-                    <ul class="chat-log">
-                        {block:Lines}
-                            <li class="[ chat-log__line  chat-log__line--{Alt} ]  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
-                        {/block:Lines}
-                    </ul>
-                {/block:Chat}
-
-                {block:Audio}
-                    <!-- Audio -->
-                    <figure class="post-media">
-                        {AudioEmbed}
-
-                        {block:Caption}
-                            <figcaption class="[ caption  caption--audio ]">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Audio}
-
-                {block:Video}
-                    <!-- Video -->
-                    <figure class="post-media">
-                        {VideoEmbed-500}
-
-                        {block:Caption}
-                            <figcaption class="[ caption  caption--video ]">{Caption}</figcaption>
-                        {/block:Caption}
-                    </figure>
-                {/block:Video}
-
-                <!-- Post metadata -->
-                <footer class="post-meta">
-                    <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
-                    <a class="post-meta__notes" href="#">{NoteCountWithLabel}</a>
-                    {block:HasTags}
-                        <ul class="tags-list">
-                            {block:Tags}
-                                <li><a class="tags-list__tag" href="{TagURL}">{Tag}</a></li>
-                            {/block:Tags}
-                        </ul>
-                    {/block:HasTags}
-                </footer>
-
-            </article><!-- /single-post -->
+    {block:IfShowNavigation}
+      <nav role="navigation">
+        <ul class="site-nav">
+          {block:IfShowHomeLink}
+            <li><a href="/">Home</a></li>
+          {/block:IfShowHomeLink}
+          {block:IfShowArchiveLink}
+            <li><a href="/archive">Archive</a></li>
+          {/block:IfShowArchiveLink}
+          {block:HasPages}
+            {block:Pages}
+              <li><a href="{URL}">{Label}</a></li>
+            {/block:Pages}
+          {/block:HasPages}
+        </ul>
+      </nav>
+    {/block:IfShowNavigation}
+  </header><!-- /site-header -->
 
 
-            {block:PostNotes}
-                <div class="post-notes" id="notes">
-                    {PostNotes-16}
-                </div><!-- /post-notes -->
-            {/block:PostNotes}
+  <main class="{block:IndexPage}posts-list{/block:IndexPage}" id="main" role="main">
+    {block:Posts}
 
-        {/block:Posts}
-    </main>
+      <article class="[ single-post  single-post--{PostType}{block:Photoset}set{/block:Photoset} ]">
+
+        {block:Text}
+          <!-- Text -->
+          {block:Title}
+            <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+          {Body}
+        {/block:Text}
+
+        {block:Photo}
+          <!-- Photo -->
+          <figure class="post-media">
+            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
+
+            {block:Caption}
+              <figcaption class="[ caption  caption--photo ]">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Photo}
+
+        {block:Photoset}
+          <!-- Photoset -->
+          <figure class="post-media">
+            {Photoset-500}
+
+            {block:Caption}
+              <figcaption class="[ caption  caption--photoset ]">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Photoset}
+
+        {block:Quote}
+          <!-- Quote -->
+          <figure class="post-media">
+            <blockquote class="featured-quote">{Quote}</blockquote>
+
+            {block:Source}
+              <figcaption class="[ caption  caption--quote-source ]">{Source}</figcaption>
+            {/block:Source}
+          </figure>
+        {/block:Quote}
+
+        {block:Link}
+          <!-- Link -->
+          <a class="featured-link" href="{URL}" {Target}>{Name}</a>
+
+          {block:Description}
+            <div class="[ caption  caption--link-description ]">{Description}</div>
+          {/block:Description}
+        {/block:Link}
+
+        {block:Chat}
+          <!-- Chat -->
+          {block:Title}
+            <h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+
+          <ul class="chat-log">
+            {block:Lines}
+              <li class="[ chat-log__line  chat-log__line--{Alt} ]  user_{UserNumber}">{block:Label}<span class="chat-log__label">{Label}</span> {/block:Label}{Line}</li>
+            {/block:Lines}
+          </ul>
+        {/block:Chat}
+
+        {block:Audio}
+          <!-- Audio -->
+          <figure class="post-media">
+            {AudioEmbed}
+
+            {block:Caption}
+              <figcaption class="[ caption  caption--audio ]">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Audio}
+
+        {block:Video}
+          <!-- Video -->
+          <figure class="post-media">
+            {VideoEmbed-500}
+
+            {block:Caption}
+              <figcaption class="[ caption  caption--video ]">{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Video}
+
+        <!-- Post metadata -->
+        <footer class="post-meta">
+          <a class="post-meta__date" href="{Permalink}">{Month} {DayOfMonth}</a>
+          <a class="post-meta__notes" href="#">{NoteCountWithLabel}</a>
+          {block:HasTags}
+            <ul class="tags-list">
+              {block:Tags}
+                <li><a class="tags-list__tag" href="{TagURL}">{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          {/block:HasTags}
+        </footer>
+
+      </article><!-- /single-post -->
 
 
-    {block:Pagination}
-        <footer class="pagination" id="pagination">
-            {block:NextPage}<a class="[ pagination__link  pagination__link--older ]" href="{NextPage}">{lang:Older posts}</a>{/block:NextPage}
-            {block:PreviousPage}<a class="[ pagination__link  pagination__link--newer ]" href="{PreviousPage}">{lang:Newer posts}</a>{/block:PreviousPage}
-        </footer><!-- /pagination -->
-    {/block:Pagination}
+      {block:PostNotes}
+        <div class="post-notes" id="notes">
+          {PostNotes-16}
+        </div><!-- /post-notes -->
+      {/block:PostNotes}
+
+    {/block:Posts}
+  </main>
 
 
-    <!-- Google Analytics -->
-    {block:IfGoogleAnalyticsID}
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    {/block:IfGoogleAnalyticsID}
+  {block:Pagination}
+    <footer class="pagination" id="pagination">
+      {block:NextPage}<a class="[ pagination__link  pagination__link--older ]" href="{NextPage}">{lang:Older posts}</a>{/block:NextPage}
+      {block:PreviousPage}<a class="[ pagination__link  pagination__link--newer ]" href="{PreviousPage}">{lang:Newer posts}</a>{/block:PreviousPage}
+    </footer><!-- /pagination -->
+  {/block:Pagination}
+
+
+  <!-- Google Analytics -->
+  {block:IfGoogleAnalyticsID}
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+  {/block:IfGoogleAnalyticsID}
 
 </body>
 </html>
