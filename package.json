@@ -2,7 +2,7 @@
   "name": "tumblr-boilerplate",
   "version": "0.7.0",
   "description": "A basic starting point for Tumblr theme development.",
-  "main": "Gruntfile.js",
+  "main": "index.html",
   "author": {
     "name": "Joe Joiner",
     "url": "http://joejoiner.me"
