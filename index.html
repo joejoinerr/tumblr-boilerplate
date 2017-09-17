@@ -43,11 +43,11 @@
 
   <header class="site-header" id="header" role="banner">
     {block:IfShowTitle}
-      <a class="site-title" href="/">{Title}</a>
+      <a class="site-title" href="{BlogURL}">{Title}</a>
     {/block:IfShowTitle}
 
     {block:IfShowSearchBox}
-      <form class="search-form" action="/search" method="get">
+      <form class="search-form" action="{BlogURL}/search" method="get">
         <input type="search" name="q" value="{SearchQuery}" placeholder="Search&hellip;" required>
       </form>
     {/block:IfShowSearchBox}
@@ -56,10 +56,10 @@
       <nav role="navigation">
         <ul class="site-nav">
           {block:IfShowHomeLink}
-            <li><a href="/">{lang:Home}</a></li>
+            <li><a href="{BlogURL}">{lang:Home}</a></li>
           {/block:IfShowHomeLink}
           {block:IfShowArchiveLink}
-            <li><a href="/archive">{lang:Archive}</a></li>
+            <li><a href="{BlogURL}/archive">{lang:Archive}</a></li>
           {/block:IfShowArchiveLink}
           {block:HasPages}
             {block:Pages}
