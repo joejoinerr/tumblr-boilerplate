@@ -47,9 +47,15 @@ var paths = {
  * Copy HTML to build folder
  */
 
-gulp.task('html', function() {
+gulp.task('html', ['css'], function() {
+    var inlineSourceOptions = {
+      compress: false,
+      rootpath: paths.dist
+    };
+
   return gulp.src(paths.src + paths.html)
-    .pipe(parser({ data: './data.json' }))
+    .pipe(plugins.inlineSource(inlineSourceOptions))
+    .pipe(plugins.tumblrThemeParser({ data: './data.json' }))
     .on('error', errorHandler)
     .pipe(gulp.dest('./', { cwd: paths.dist }))
 });
@@ -118,4 +124,4 @@ gulp.task('img', function() {
  * Compile
  */
 
-gulp.task('dist', ['css', 'html', 'img'])
+gulp.task('dist', ['html', 'img'])
