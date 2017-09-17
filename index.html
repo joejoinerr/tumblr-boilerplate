@@ -28,7 +28,9 @@
   <meta name="if:Show search box" content="1">
   <meta name="text:Google Analytics ID" content="">
 
-  <link rel="canonical" href="{BlogURL}">
+  {block:PermalinkPage}<link rel="canonical" href="{Permalink}">{/block:PermalinkPage}
+  {block:NextPage}<link rel="next" href="{NextPage}">{/block:NextPage}
+  {block:PreviousPage}<link rel="prev" href="{PreviousPage}">{/block:PreviousPage}
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
