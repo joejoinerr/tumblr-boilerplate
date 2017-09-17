@@ -80,7 +80,6 @@ gulp.task('css', function() {
   return gulp.src(paths.src + paths.css)
     .pipe(plugins.postcss(postcssPlugins))
     .pipe(gulp.dest('./css', { cwd: paths.dist }))
-    .pipe(browserSync.stream())
 });
 
 
