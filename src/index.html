@@ -29,8 +29,8 @@
   <meta name="text:Google Analytics ID" content="">
 
   {block:PermalinkPage}<link rel="canonical" href="{Permalink}">{/block:PermalinkPage}
-  {block:NextPage}<link rel="next" href="{NextPage}">{/block:NextPage}
-  {block:PreviousPage}<link rel="prev" href="{PreviousPage}">{/block:PreviousPage}
+  {block:NextPage}<link rel="next" href="{BlogURL}{NextPage}">{/block:NextPage}
+  {block:PreviousPage}<link rel="prev" href="{BlogURL}{PreviousPage}">{/block:PreviousPage}
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
@@ -45,7 +45,7 @@
     {/block:IfShowTitle}
 
     {block:IfShowSearchBox}
-      <form class="search-form" action="{BlogURL}/search" method="get">
+      <form class="search-form" action="{BlogURL}search" method="get">
         <input type="search" name="q" value="{SearchQuery}" placeholder="Search&hellip;" required>
       </form>
     {/block:IfShowSearchBox}
@@ -57,7 +57,7 @@
             <li><a href="{BlogURL}">{lang:Home}</a></li>
           {/block:IfShowHomeLink}
           {block:IfShowArchiveLink}
-            <li><a href="{BlogURL}/archive">{lang:Archive}</a></li>
+            <li><a href="{BlogURL}archive">{lang:Archive}</a></li>
           {/block:IfShowArchiveLink}
           {block:HasPages}
             {block:Pages}
