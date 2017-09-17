@@ -20,7 +20,6 @@ var plugins = gulpLoadPlugins();
 var pngquant = require('imagemin-pngquant');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
-var brandColors = require('postcss-brand-colors');
 var reload = browserSync.reload;
 
 
