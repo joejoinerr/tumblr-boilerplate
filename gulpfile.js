@@ -77,14 +77,8 @@ gulp.task('css', function() {
     cssnano()
   ]
 
-  var cleanCSSOptions = {
-    debug: true,
-    rebase: false
-  }
-
   return gulp.src(paths.src + paths.css)
     .pipe(plugins.postcss(postcssPlugins))
-    .pipe(plugins.cleancss(cleanCSSOptions))
     .pipe(gulp.dest('./css', { cwd: paths.dist }))
     .pipe(browserSync.stream())
 });
