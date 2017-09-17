@@ -51,8 +51,15 @@ var paths = {
 
 gulp.task('html', function() {
   return gulp.src(paths.src + paths.html)
+    .pipe(parser({ data: './data.json' }))
+    .on('error', errorHandler)
     .pipe(gulp.dest('./', { cwd: paths.dist }))
 });
+
+var errorHandler = function (err) {
+  console.log('Error: ' + err);
+  this.emit('end')
+}
 
 
 
