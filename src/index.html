@@ -3,12 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>
-    {block:PostTitle}{PostTitle} - {/block:PostTitle}
-    {block:TagPage}{Tag} - {/block:TagPage}
-    {block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}
-    {Title}
-  </title>
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{block:TagPage}{Tag} - {/block:TagPage}{block:SearchPage}{lang:Search for SearchQuery} - {/block:SearchPage}{Title}</title>
   {block:Description}
     <meta name="description" content="{MetaDescription}">
   {/block:Description}
