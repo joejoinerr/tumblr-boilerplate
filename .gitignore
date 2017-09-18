@@ -6,3 +6,4 @@ tumblr-boilerplate.wiki/
 # Files
 *.sublime-project
 *.sublime-workspace
+.DS_Store
