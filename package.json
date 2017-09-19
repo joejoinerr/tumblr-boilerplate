@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/joejoinerr/tumblr-boilerplate.git"
   },
+  "private": true
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
