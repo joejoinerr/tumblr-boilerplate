@@ -55,7 +55,7 @@ gulp.task('html', ['css'], function() {
 
   return gulp.src(paths.src + paths.html)
     .pipe(plugins.inlineSource(inlineSourceOptions))
-    .pipe(plugins.tumblrThemeParser({ data: './data.json' }))
+    .pipe(plugins.tumblrThemeParser({ data: './tumblr-data.json' }))
     .on('error', errorHandler)
     .pipe(gulp.dest('./', { cwd: paths.dist }))
 });
