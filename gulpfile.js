@@ -48,10 +48,10 @@ var paths = {
  */
 
 gulp.task('html', ['css'], function() {
-    var inlineSourceOptions = {
-      compress: false,
-      rootpath: paths.dist
-    };
+  var inlineSourceOptions = {
+    compress: false,
+    rootpath: paths.dist
+  };
 
   return gulp.src(paths.src + paths.html)
     .pipe(plugins.inlineSource(inlineSourceOptions))
