@@ -107,19 +107,19 @@ gulp.task('css:dist', function() {
  */
 
 gulp.task('img', function() {
+  return gulp.src(paths.src + paths.img)
+    .pipe(gulp.dest(paths.tmp + 'img/'))
+});
+
+gulp.task('img:dist', ['img'], function() {
   var imageminPlugins = [
     plugins.imagemin.jpegtran({ progressive: true }),
     plugins.imagemin.gifsicle({ interlaced: true }),
     pngquant()
   ]
 
-  return gulp.src(paths.src + paths.img)
-    .pipe(plugins.imagemin(imageminPlugins, { verbose: true }))
-    .pipe(gulp.dest(paths.tmp + 'img/'))
-});
-
-gulp.task('img:dist', ['img'], function() {
   return gulp.src(paths.tmp + paths.img)
+    .pipe(plugins.imagemin(imageminPlugins, { verbose: true }))
     .pipe(gulp.dest(paths.dist + 'img/'))
 });
 
